@@ -1,0 +1,44 @@
+.error-page{
+    @include flex(f,ac,jc);
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+    img{
+        width: rem(400px);
+        margin-bottom: rem(24px);
+        margin-left: rem(80px);
+    }
+    h1{
+        @include typo(rem(33px),300,$pc);
+        margin-bottom: rem(8px);
+    }
+    p{
+        @include sf-typo(rem(14px),$font-r,#414024);
+        margin-bottom: rem(24px);
+    }
+    .rounded-btn{
+        background: $orange-bg;
+        color: $white;
+        font-size: rem(20px);
+        padding: rem(10.5px) rem(50px);
+    }
+}
+
+@include max(d-600){
+    .error-page{
+        img{
+            width: 70%;
+            margin-left: 64px;
+        }
+        h1{
+            @include typo(rem(24px),300,$pc);
+        }
+        p{
+            @include sf-typo(rem(13px),$font-r,#414024);
+        }
+        .rounded-btn{
+            font-size: rem(13px);
+            padding: rem(6.5px) rem(50px);
+        }
+    }
+}

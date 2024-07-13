@@ -1,0 +1,81 @@
+.arcon-footer{
+    background: $footer-bg;
+    padding-block: rem(48px) rem(24px);
+    &-grid{
+        display: grid;
+        grid-template-columns: 34% 22% 22% 22%;
+        justify-content: space-between;
+        &-col{
+            .white-logo{
+                max-height: rem(92px);
+                width: 100%;
+                margin-bottom: rem(16px);
+                margin-left: rem(-10px);
+
+            }
+            .footer-desc{
+                @include sf-typo(rem(14px),$font-r,$white,rem(28px));
+                max-width: 90%;
+            }
+            .social-icons{
+                @include flex(f,ac);
+                gap: rem(20px);
+                a{
+                    svg{
+                        fill: #fff;
+                        width: rem(26px);
+                        &:hover{
+                            fill: $a-hover;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-logo-col{
+            max-width: 74%;
+            margin-top: rem(-10px);
+        }
+        .footer-links{
+            @include flex(f,as);
+            flex-direction: column;
+            gap: rem(25px);       
+            .foot-inner{
+                @include flex(f,as);
+                flex-direction: column;
+                gap: rem(25px);       
+                .footer-link-heading{
+                    @include sf-typo(rem(14px),$font-m,$white);  
+                    text-transform: capitalize;   
+                    &:hover{
+                        color: $a-hover;
+                    }            
+                }
+                .footer-link-sub-heading{
+                    @include sf-typo(rem(14px),$font-r,$white);
+                    // text-transform: capitalize;               
+                    &:hover{
+                        color: $a-hover;
+                    }  
+                }
+            }
+        }
+    }
+    .arcon-copyright{
+        @include flex(f,ac,jb);
+        margin-top: rem(50px);
+        .copyright{
+            @include sf-typo(rem(12px),$font-r,$white,rem(28px));
+            margin-bottom: 0
+        }
+        .privacy-links{
+            @include flex(f,ac);
+            gap: rem(50px);
+            a{
+                @include sf-typo(rem(12px),$font-r,$white,rem(28px));
+                &:hover{
+                    color: $a-hover;
+                }
+            }
+        }
+    }
+}

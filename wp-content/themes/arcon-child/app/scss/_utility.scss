@@ -1,0 +1,273 @@
+.pc {
+    color: $pc;
+}
+
+.sc {
+    color: $sc;
+}
+.pos-rel{
+    position: relative;
+}
+
+.cursor{
+    // position: absolute;
+    // z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    svg {
+        // height: 2000vh;
+        // width: 100vw;
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+      
+      
+}
+circle {
+    fill: $sc;
+  }
+
+
+// .cursor {
+//     display: block;
+//     width: 30px;
+//     height: 30px;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%);
+//     border-radius: 50%;
+//     background: $pc;
+//     pointer-events: none;
+//     z-index: 111;
+//     border: 1px solid $pc;
+//     transition: all 0.2s ease-out;
+//     animation: moveCursor1 .5s infinite alternate;
+// }
+
+.border-btn{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid $pc;
+    color: $pc;
+    border-radius: rem(30px);
+    padding: rem(12px) rem(36px);
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: rem(18px);
+    font-weight: $font-sb;
+    transition: all 0.5s;
+    white-space: nowrap;
+    &:hover{
+        background: $pc;
+        color: $white;
+        svg{
+            stroke: $white;
+            fill: $white;
+            .svg-arrow{
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+.menu-whitebtn{
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: rem(30px);
+    padding: rem(12px) rem(36px);
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: rem(18px);
+    font-weight: $font-sb;
+    transition: all 0.5s;
+    white-space: nowrap;
+    svg{
+        .menu-line{
+            stroke: $white;
+            fill: $white;
+        }
+    }
+    &:hover{
+        background: $pc;
+        color: $white;
+        border: 1px solid $pc;
+        svg{
+            stroke: $white;
+            fill: $white;
+            
+            .svg-arrow{
+                transition: all 0.5s;
+            }
+        }
+    }
+}
+
+
+
+.white-btn{
+    display: inline-block;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: rem(50px);
+    padding: rem(36.5px) rem(66px);
+    font-size: rem(22px);
+    line-height: rem(25px);
+    cursor: pointer;
+    background: transparent;
+    position: relative;
+    font-weight: $font-sb;
+    z-index: 1;
+    transition: all 0.5s;
+    text-transform: capitalize;
+    width: fit-content;
+    white-space: nowrap;
+    &:hover{
+        background: $white;
+        color: $pc;
+    }
+
+}
+.scroll-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(10px) 0;
+    position: absolute;
+    bottom: rem(75px);
+    left:rem(82px);
+    cursor: pointer;
+    p{
+        font-size: rem(14px);
+        line-height: rem(30px);
+        color: $a-hover;
+        text-transform: capitalize;
+        transform: rotate(270deg);
+    }
+    .scroll-arrow{
+        width: rem(15px);
+    }
+}
+.mob-cls{
+    display: none;
+}
+footer{
+    position: relative;
+    .lets-connect{
+        position: fixed;
+        right: rem(30px);
+        bottom: rem(47px);
+        z-index: 2;
+        .connect{
+            max-width: rem(120px);
+            transition: 0.3s ease;
+        }
+        &:hover{
+            .connect{
+                scale: 1.4;
+            }
+        }
+    }
+}
+.for-mobile{
+    display: none!important;
+}
+// .Cursor{
+//     position: absolute;
+// }
+// #Wrap {
+//     position: absolute;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: none;
+//     min-width: rem(40px);
+//     min-height: rem(40px);
+//     border-radius: 50%;
+
+//     background: $pc;
+
+//   }
+  
+//   #Wrap .FollowBox {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 40px;
+//     height: 40px;
+//     background: $pc;
+//     border-radius: 50%;
+//   }
+  
+//   #Wrap .FollowBox:nth-child(1) {   
+//     z-index: 4;
+//   }
+  
+//   #Wrap .FollowBox:nth-child(2) {
+//     z-index: 3;
+//   }
+  
+//   #Wrap .FollowBox:nth-child(3) {
+//     z-index: 2;
+//   }
+  
+//   #Wrap .FollowBox:nth-child(4) {
+//     z-index: 1;
+//   }
+
+@include max(d-600){
+    .cursor {
+        display: none;
+    }
+    .for-mobile{
+        display: block!important;
+    }
+    h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .white-btn{
+        padding: 16.5px 40px;
+        font-size: 18px;
+    }
+    .border-btn{
+        // border: unset;
+        // color: $white;
+        padding: 14.5px 28px;
+        // background: $pc;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .desk-cls{
+        display: none;
+    }
+    .mob-cls{
+        display: block;
+    }
+    footer{
+        .lets-connect{
+            right: 20px;
+            bottom: 30px;
+            .connect{
+                max-width: 60px;
+            }
+        }
+    }
+    // main{
+    //     overflow: hidden;
+    // }
+}

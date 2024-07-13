@@ -1,0 +1,22 @@
+.contact-banner{
+    padding: rem(70px) 0 rem(25px);
+    .banner-wrapper{
+        border-radius: rem(50px) rem(10px);
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: auto;
+            transition: all 1s;
+            &:hover{
+                transform: scale(1.05);
+                transition: all 1s;
+            }
+        }
+    }
+}
+
+.contact-us-page{
+    .our-team{
+        padding: rem(50px) 0 rem(25px);
+    }
+}

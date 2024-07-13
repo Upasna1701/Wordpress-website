@@ -1,0 +1,274 @@
+@include max(d-600){
+    .about-banner{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 0% 100%);
+        .aboutbanner{
+            .about-banner-sec {
+                .banner-content{
+                    // padding-inline: 12px;
+                    max-width: 97%;
+                    margin-inline: auto;
+                    padding-top: rem(40px);
+                    .banner-h1{
+                        @include typo(24px,$font-r,$sc,30px);
+                        max-width: 60%;
+                    }
+                    .desc-content{
+                        .banner-desc{
+                            p{
+
+                                @include typo(13px,null,$sc,22px);
+                            }
+                        }
+                        .about-banner-cta{
+                            @include sf-typo(13px,null,$orange-bg,22px);
+                        }
+                    }
+                }
+            }  
+        }
+    }
+    .vision-mission{
+        padding-block: 44px 24px;
+        h2{
+            margin-bottom: 8px;
+        }
+        .vision-mission-values{
+            margin-top: 24px;
+            gap: 40px;
+            .vision-mission-sec{
+                flex-direction: column;
+                padding: 25px 28px 40px 28px;
+                border-radius: 40px 10px;
+                &:before{
+                    top: -159px;
+                    left: -139px;
+                }
+                .svg-sec{
+                    gap: 46px;
+                    img{
+                        width: 36px;
+                    }
+                    h2{
+                        margin-top: 40px;
+                        margin-bottom: 20px;
+                    }
+                }
+                .vision-statement{
+                    max-width: 100%;
+                    p{
+                        @include typo(13px,null,$white,22px);
+                    }
+                    ul{
+                        padding-left: 15px;
+                        li{
+                            &::marker{
+                                font-size: 20px;
+                            }
+                            h3{
+                                @include sf-typo(15px,$font-b,$white,24px);
+                                margin-bottom: 6px;
+                            }
+                            p{
+                                @include typo(13px,null,$white,22px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .management{
+        padding-block: 16px 44px;
+        h2{
+            margin-bottom: 16px;
+        }
+        .management-details{
+            margin-top: 24px;
+            flex-direction: column;
+            .management-content-left{
+                flex: 1;
+                margin-top: 85px;
+
+                .content-side{
+                    max-width: 100%;
+                    p{
+                        @include typo(13px,null,$footer-bg,22px);
+                        margin-bottom: 8px;
+                    }
+                    .management-cta{
+                        @include sf-typo(13px,null,$orange-bg,22px);
+                    }
+                    h3{
+                        @include typo(22px,$font-r,$sc);
+                        margin-bottom: 8px;
+                    }
+                    .email-id{
+                        @include sf-typo(13px,null,$sc);
+                        &:hover{
+                            color: $orange-bg;
+                        }
+    
+                    }
+                }
+            }
+            .management-content-right{
+                flex: 1;
+                .image-animation{
+                    border-radius: 30px 5px;
+                    .management-img{
+                        border-radius: 30px 5px;
+                        max-width: 100%;
+
+                    }
+    
+                }
+                .square-animation{
+                    border-radius: 30px 5px;
+                    width: 230px;
+                    height: 230px;
+                    top: 110px;
+                    
+                }
+            }
+        }
+    }
+    .our-team{
+        .team-members-grid{
+            grid-template-columns: repeat(1,1fr);
+            gap: 20px;
+            padding-inline: 48px;
+            margin-top: 15px;
+            .team-members-grid-col{
+                .img-div{
+                    border-radius: 40px 10px;
+                    img{
+                        border-radius: 40px 10px;
+                    }
+                }
+                .team-member-detail{
+                    z-index: 1;
+                    position: relative;
+                    .mailto{
+                        a{
+                            @include sf-typo(13px,$font-r,$sc);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .initiative{
+        padding-block: 96px 120px;
+        clip-path: polygon(0% 4%, 100% 0%, 100% 96%, 0% 100%);
+        .initiative-content{
+            flex-direction: column-reverse;
+            padding-bottom: 0;
+            .content-left{
+                flex: 1;
+                padding-top: 65px;
+                .ini-con{
+                    max-width: 100%;
+                    p{
+                        @include sf-typo(13px,$font-r,$white,22px);
+                    }
+                    ul{
+                        li{
+                            @include sf-typo(13px,$font-m,$white,22px);
+                            &::marker{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-right{
+                flex: 1;
+                .image-animation{
+                    border-radius: 30px 5px;
+                    margin-left: 0;
+                    max-width: 85%;
+                    .initiative-img{
+                        border-radius: 30px 5px;
+                    }
+    
+                }
+                .square-animation{
+                    width: 230px;
+                    height: 230px;
+                    top: 15px;
+                    border-radius: 5px 30px;
+                }
+            }
+        }
+    }
+
+    .initiative-new{
+        padding-block: 0;
+        .initiative-new-secheading{
+            p{
+                @include sf-typo(rem(13px),$font-r,#484747,rem(22px));
+                max-width: 100%;
+            }
+        }
+        .initiative-slider-points{
+            .points-repeater{
+                flex-direction: column-reverse;
+                gap: 0  ;
+                .initiative-slider-points-left{
+                    flex:1;
+                    h3{
+                        @include typo(rem(22px),$font-r,$sc);
+                        max-width: 100%;
+                    }
+                    p{
+                        @include typo(rem(13px),null,$footer-bg,rem(22px));
+                        max-width: 100%;
+                    }
+                    ul{
+                        padding-left: rem(20px);
+                        li{
+                            @include sf-typo(rem(13px),null,$footer-bg,rem(22px));
+                            list-style-type: disc;
+                            &::marker{
+                                color: $white;
+                                font-size: rem(18px);
+                            }
+                        }
+                    }
+                }
+                .initiative-slider-points-right{
+                    flex:1;
+                    width: 100%;
+                }
+    
+                &:nth-child(even){
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .life-at-arcon{
+        padding-block: 44px;
+        p{
+            @include sf-typo(13px,$font-r,#484747,22px);
+            margin-bottom: 24px;
+            padding-inline: 12px;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,137 @@
+@include max(d-600){
+    .indutries-we-cater{
+        .industries-grid{
+            grid-template-columns: repeat(2,1fr);
+            .industries-grid-col{
+                img{
+                    max-height: auto;
+                    height: 130px
+                }
+                .image-text{
+                    @include typo(21px,$font-r,$white);
+                }
+            }
+        }
+    }
+    .videos-3d{
+        padding-block: 0 rem(60px);
+        h2{
+            text-align: center;
+            margin-bottom: rem(32px);
+        }
+    }
+    .tanks-page{
+        .life-at-arcon{
+            padding-block: 48px;
+        } 
+        .initiative{
+            padding-block: 0 120px;
+            .initiative-content{
+                flex-direction: column;
+                gap: 40px;
+                .content-right {
+                    .square-animation{
+                        top: 50px;
+                    }
+                }
+            }
+        }
+        .looking-for{
+            padding-top: rem(44px);
+            padding-bottom: rem(44px);
+            &-sec{
+                h2{
+                    margin-bottom: 32px;
+                }
+                .looking-flexcol{
+                    .looking-sec-content{
+                        gap: 50px;
+                        .looking-sec-content-left{
+                            .con-start{
+                                p{
+                                    font-size: 13px;
+                                
+                                } 
+                                // b,strong{
+                                //     font-family: $sf-font;
+                                // }
+        
+                            } 
+                        } 
+                        .looking-sec-content-right{
+                            .square-animation{
+                                top: 40px;
+                            }
+                        }
+                    }
+                } 
+            } 
+        }
+        .vision-mission{
+            padding-block: 32px 24px;
+            .vision-mission-values{
+                .vision-mission-sec{
+                    .vision-statement{
+                        ul{
+                            padding-top: 30px;
+                        }
+                    } 
+                }
+            }
+        }
+        .about-banner{
+            .aboutbanner{
+                .about-banner-sec{
+                    .banner-content{
+                        max-width: 100%;
+                        .banner-h1{
+                            max-width: 100%;
+                            font-size: 24px;
+                            line-height: 30px;
+                        }
+                        .desc-content{
+                            max-width: 100%;
+    
+                        }
+                    }
+                } 
+            } 
+        } 
+    }
+    .new-prd-pages{
+        // .offer-sec {
+        //     .offer-wrapper {
+        //         p {
+        //             width: 100%;
+        //             padding: 15px 15px 40px;
+        //         }
+        //         .button {
+        //             // width: 45%;
+        //             gap: 20px;
+        //             a {
+        //                 white-space: nowrap;
+        //                 padding-inline: 10px;
+        //                 font-size: 14px;
+        //             }
+        //         }
+        //     }
+        // }
+        .specifications-sec {
+            padding: rem(50px) 0 rem(100px);
+
+
+            .specifications-list {
+                // display: flex;
+                // flex-wrap: wrap;
+        
+                .box {
+                    min-width: 100%;
+                    overflow: scroll;
+                    // table{
+                    //     width: 100%;
+                    // }
+                }
+            }
+        }
+    }
+}
